@@ -17,9 +17,11 @@ public void reetu()
 	String URL = System.getProperty("url");
 	if(Browser.equalsIgnoreCase("chrome")) 
 	{
+		System.setProperty("webdriver.chrome.driver","./Softwares/chromedriver.exe");
 		driver=new ChromeDriver();
 	}else if(Browser.equalsIgnoreCase("Firefox")) 
 	{
+		System.setProperty("webdriver.gecko.driver","./Softwares/geckodriver.exe");
 		driver=new FirefoxDriver();
 	}driver.get(URL);
 }
