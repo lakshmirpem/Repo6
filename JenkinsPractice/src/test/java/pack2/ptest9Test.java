@@ -6,24 +6,27 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class ptest9Test 
 {
-	 WebDriver driver;
+	WebDriver driver;
 @Test
 public void reetu()
 {
+	 String Browser = System.getProperty("Browser");
+	String url = System.getProperty("URL");
 	
-	String Browser = System.getProperty("browser");
-	String URL = System.getProperty("url");
-	if(Browser.equalsIgnoreCase("Chrome")) 
+	
+	if(Browser.equalsIgnoreCase("Chrome"))
 	{
-		System.setProperty("webdriver.chrome.driver","./Softwares/chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 		driver=new ChromeDriver();
-	}else if(Browser.equalsIgnoreCase("Firefox")) 
+	}else 
 	{
-		System.setProperty("webdriver.gecko.driver","./Softwares/geckodriver.exe");
+		WebDriverManager.firefoxdriver().setup();
 		driver=new FirefoxDriver();
 	}
-	driver.get(URL);
+	driver.get(url);
 }
 }
