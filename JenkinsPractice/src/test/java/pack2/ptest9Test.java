@@ -15,7 +15,7 @@ public void reetu()
 	
 	String Browser = System.getProperty("browser");
 	String URL = System.getProperty("url");
-	if(Browser.equalsIgnoreCase("chrome")) 
+	if(Browser.equalsIgnoreCase("Chrome")) 
 	{
 		System.setProperty("webdriver.chrome.driver","./Softwares/chromedriver.exe");
 		driver=new ChromeDriver();
