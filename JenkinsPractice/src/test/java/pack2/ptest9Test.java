@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class ptest9Test 
 {
-	public WebDriver driver;
+	 WebDriver driver;
 @Test
 public void reetu()
 {
@@ -23,6 +23,7 @@ public void reetu()
 	{
 		System.setProperty("webdriver.gecko.driver","./Softwares/geckodriver.exe");
 		driver=new FirefoxDriver();
-	}driver.get(URL);
+	}
+	driver.get(URL);
 }
 }
