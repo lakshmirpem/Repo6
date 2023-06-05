@@ -15,7 +15,7 @@ public class ptest9Test
 public void reetu()
 {
 	 String Browser = System.getProperty("Browser");
-	String url = System.getProperty("URL");
+	String url = System.getProperty("url");
 	
 	
 	if(Browser.equalsIgnoreCase("Chrome"))
